@@ -38,7 +38,7 @@ x, xt, y, yt = x.T, xt.T, y.T, yt.T
 def iniparams(layer_dims):
     params = {}
     for l in range(1, len(layer_dims)):
-        params['W' + str(l)] = np.random.randn(layer_dims[l], layer_dims[l - 1])*0.01
+        params['W' + str(l)] = np.random.randn(layer_dims[l], layer_dims[l - 1])*np.sqrt(2/[l - 1])
         params['b' + str(l)] = np.zeros((layer_dims[l], 1))
     return params
 
@@ -198,7 +198,7 @@ def model(x, y, layer_dims, iters = 3000):
 # In[19]:
 
 
-params, costs = model(x, y, [8, 5, 7, 9, 13, 1])
+params, costs = model(x, y, [8, 5, 1])
 
 
 # In[20]:
