@@ -207,7 +207,7 @@ def model(x, y, layer_dims, iters):
 # In[47]:
 
 
-costs, params = model(x, y, [30,8,5,4,4,3,1], 3000)
+costs, params = model(x, y, [30,3,1], 3000)
 
 
 # In[97]:
