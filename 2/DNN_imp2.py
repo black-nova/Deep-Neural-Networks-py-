@@ -234,7 +234,7 @@ def model(x, y, layer_dims, iters = 3000):
 # In[27]:
 
 
-params, costs = model(x, y, [8, 5, 4, 3, 1])
+params, costs = model(x, y, [8, 5, 1])
 
 
 # In[28]:
@@ -266,4 +266,5 @@ def predict(x,params):
 predictions = predict(xt,params)
 print ('Accuracy: %d' % float((np.dot(yt,predictions.T) + np.dot(1-yt,1-predictions.T))/float(yt.size)*100)+ '%')
 predictions = predictions.astype('int')
+
 
