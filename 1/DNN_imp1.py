@@ -198,7 +198,7 @@ def model(x,y,layer_dims,learning_rate=0.8,num_iterations=3000):
 # In[19]:
 
 
-params,costs=model(x,y,[3,4,9,5,11,50,4,3,1])
+params,costs=model(x,y,[3,4,4,3,1])
 
 
 # In[20]:
